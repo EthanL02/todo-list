@@ -1,4 +1,20 @@
+:root[data-theme="light"] {
+    --text: #151b1e;
+    --background: #edf0f2;
+    --primary: #3a4750;
+    --secondary: #bda3a9;
+    --accent: #94806b;
+}
+:root[data-theme="dark"] {
+    --text: #e1e7ea;
+    --background: #0d1012;
+    --primary: #afbcc5;
+    --secondary: #5c4248;
+    --accent: #94806b;
+}
+
 body {
+    background: var(--background);
     height: 100vh;
     margin: 0;
     display: grid;
@@ -11,16 +27,13 @@ body {
 }
 
 #header {
-    background-color: blue;
     grid-area: header;
 }
 
 #side-bar {
-    background-color: aquamarine;
     grid-area: side-bar;
 }
 
 #main-content {
-    background-color: burlywood;
     grid-area: main-content;
 }
