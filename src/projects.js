@@ -1,4 +1,4 @@
-import project from "./project-creator.js";
+import project from "./project.js";
 
 const sideBar = document.getElementById("side-bar");
 
@@ -12,8 +12,8 @@ function getAll() {
     return projects;
 }
 
-function get(index) {
+function find(index) {
     return projects[index];
 }
 
-export default { addProject, getAll, get };
+export default { addProject, getAll, find };

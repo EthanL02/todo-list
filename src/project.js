@@ -5,6 +5,10 @@ function createNewProject(name) {
         todos.push(newTodo);
     }
 
+    function getTodos() {
+        return todos;
+    }
+
     function print() {
         let out = name;
         
@@ -15,7 +19,7 @@ function createNewProject(name) {
         console.log(out);
     }
 
-    return { print, addTodo, name }
+    return { getTodos, print, addTodo, name }
 }
 
 export default { createNewProject };
