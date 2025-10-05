@@ -28,10 +28,12 @@ body {
 
 #header {
     grid-area: header;
+    box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.1);
 }
 
 #side-bar {
     grid-area: side-bar;
+    box-shadow: 5px 0 15px 0px rgba(0, 0, 0, 0.1);
 }
 
 #main-content {

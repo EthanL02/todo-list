@@ -1,7 +1,8 @@
 import "./styles.css";
 import todo from "./todo-creator.js";
-import project from "./project-creator.js";
+import projects from "./projects.js";
 
+/*
 const demoProject = project.createNewProject("My first project");
 demoProject.print();
 
@@ -11,3 +12,11 @@ const todo2 = todo.createNewTodo("Item # 2", "Description for second item", "5/0
 demoProject.addTodo(todo1);
 demoProject.addTodo(todo2);
 demoProject.print();
+*/
+
+projects.addProject("My first project");
+projects.addProject("My second project");
+projects.addProject("My third project");
+
+console.log(projects.getAll());
+console.log(projects.get(1));

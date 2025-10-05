@@ -15,7 +15,7 @@ function createNewProject(name) {
         console.log(out);
     }
 
-    return { print, addTodo }
+    return { print, addTodo, name }
 }
 
 export default { createNewProject };
