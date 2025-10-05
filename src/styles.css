@@ -18,7 +18,7 @@ body {
     height: 100vh;
     margin: 0;
     display: grid;
-    grid-template-columns: 10% 90%;
+    grid-template-columns: 15% 85%;
     grid-template-rows: 10% 90%;
     grid-template-areas: 
     "header header"
@@ -34,6 +34,13 @@ body {
 #side-bar {
     grid-area: side-bar;
     box-shadow: 5px 0 15px 0px rgba(0, 0, 0, 0.1);
+    padding: 2em;
+}
+
+#side-bar .project {
+    inline-size: 100%;
+    overflow: hidden;
+    text-wrap: nowrap;
 }
 
 #main-content {

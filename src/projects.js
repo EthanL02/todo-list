@@ -1,7 +1,5 @@
 import project from "./project.js";
 
-const sideBar = document.getElementById("side-bar");
-
 const projects = [];
 
 function addProject(newProject) {
