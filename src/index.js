@@ -3,8 +3,10 @@ import todo from "./todo.js";
 import projects from "./projects.js";
 import sidebar from "./side-bar";
 
+document.documentElement.setAttribute("data-theme", "light");
+
 projects.addProject("My first project");
-projects.addProject("My second project0000000");
+projects.addProject("My second project");
 projects.addProject("My third project");
 
 let curProject = projects.find(0);
