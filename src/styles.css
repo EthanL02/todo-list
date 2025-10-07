@@ -35,6 +35,19 @@ button:hover {
     cursor: pointer;
 }
 
+dialog {
+    display: flex;
+    border-style: none;
+    align-self: center;
+    justify-self: center;
+    background-color: var(--background);
+}
+
+.dialog::backdrop {
+    background-color: black;
+    opacity: 0.25;
+}
+
 body {
     color: var(--text);
     background: var(--background);
