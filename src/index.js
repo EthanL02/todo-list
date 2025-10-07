@@ -4,12 +4,15 @@ import project from "./project.js";
 import displayController from "./display-controller.js";
 
 document.documentElement.setAttribute("data-theme", "light");
+const projectDialog = document.getElementById("project-dialog");
 
 const projects = [];
 
 function addProject(newProject) {
     projects.push(project.createNewProject(newProject));
 }
+
+projectDialog.showModal();
 
 addProject("My first project");
 addProject("My second project");
