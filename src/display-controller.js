@@ -12,9 +12,21 @@ function createProject(project) {
     sideBar.prepend(button);
 }
 
-function update(projects) {
+function createTodo(todo) {
+    const background = document.createElement("div");
+    background.classList.add("todo-background");
+    mainContent.append(background);
+}
+
+function update(projects, curProject) {
+    //Load sidebar with each project
     projects.forEach(project => {
         createProject(project);
+    });
+
+    //Load main-content with curProject's todos
+    curProject.todos.forEach(todo => {
+        createTodo(todo);
     });
 }
 
