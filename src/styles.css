@@ -1,5 +1,6 @@
 :root[data-theme="light"] {
     --text: #151b1e;
+    --text-inverse: #e1e7ea;
     --background: #edf0f2;
     --primary: #3a4750;
     --secondary: #bda3a9;
@@ -7,6 +8,7 @@
 }
 :root[data-theme="dark"] {
     --text: #e1e7ea;
+    --text-inverse: #151b1e;
     --background: #0d1012;
     --primary: #afbcc5;
     --secondary: #5c4248;
@@ -59,6 +61,15 @@ body {
 #side-bar .project:active {
     transform: scale(1);
     cursor: pointer;
+}
+
+#side-bar .add {
+    background-color: var(--primary);
+    color: var(--text-inverse);
+    border-style: none;
+    padding-inline: 1.5em;
+    padding-block: 1em;
+    border-radius: 1em;
 }
 
 #main-content {

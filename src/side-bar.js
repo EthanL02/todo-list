@@ -13,8 +13,7 @@ function update(projects) {
         div.addEventListener("click", () => {
             mainContent.update(project.todos);
         });
-
-        sideBar.append(div);
+        sideBar.prepend(div);
     });
 }
 
