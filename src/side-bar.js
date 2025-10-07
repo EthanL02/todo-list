@@ -4,16 +4,14 @@ const sideBar = document.getElementById("side-bar");
 
 function update(projects) {
     projects.forEach(project => {
-        const div = document.createElement("div");
-        div.classList.add("project");
-        const newProject = document.createElement("h3");
-        div.append(newProject);
-        newProject.textContent = project.name;
+        const button = document.createElement("button");
+        button.classList.add("project");
+        button.textContent = project.name;
 
-        div.addEventListener("click", () => {
+        button.addEventListener("click", () => {
             mainContent.update(project.todos);
         });
-        sideBar.prepend(div);
+        sideBar.prepend(button);
     });
 }
 
