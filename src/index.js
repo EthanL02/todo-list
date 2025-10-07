@@ -1,8 +1,8 @@
 import "./styles.css";
 import todo from "./todo.js";
 import projects from "./projects.js";
-import sidebar from "./side-bar";
 import mainContent from "./main-content.js";
+import displayController from "./display-controller.js";
 
 document.documentElement.setAttribute("data-theme", "light");
 
@@ -17,5 +17,6 @@ const todo2 = todo.createNewTodo("Item # 2", "Description for second item", "5/0
 curProject.addTodo(todo1);
 curProject.addTodo(todo2);
 
-sidebar.update(projects.getAll());
+displayController.update(projects.getAll());
+
 mainContent.update(curProject.todos);

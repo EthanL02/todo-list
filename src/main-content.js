@@ -4,7 +4,6 @@ const emptyLabel = mainContent.querySelector("h2");
 function update(todos) {
     if (todos.length !== 0) {
         emptyLabel.style.display = "none";
-        console.log(todos);
         todos.forEach(todo => {
             displayTodo(todo);
         });
