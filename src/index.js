@@ -4,7 +4,15 @@ import project from "./project.js";
 import displayController from "./display-controller.js";
 
 document.documentElement.setAttribute("data-theme", "light");
+
+//project form elements
 const projectDialog = document.getElementById("project-dialog");
+const projectSubmitButton = projectDialog.querySelector("button");
+
+projectSubmitButton.addEventListener("click", (event) => {
+    event.preventDefault();
+    projectDialog.close();
+});
 
 const projects = [];
 

@@ -15,7 +15,15 @@
         </div>
         <dialog closedby="any" id="project-dialog">
             <form method="post">
-                <h1>New Project</h1>
+                <label for="title">
+                    Title
+                    <input class="text" name="title" id="title" type="text">
+                </label>
+                <label for="priority">
+                    Priority
+                    <input class="number" name="priority" id="priority" type="number">
+                </label>
+                <button class="form" type="submit">Submit</button>            
             </form>
         </dialog>
     </body>
