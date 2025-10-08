@@ -8,10 +8,14 @@ document.documentElement.setAttribute("data-theme", "light");
 //project form elements
 const projectDialog = document.getElementById("project-dialog");
 const projectSubmitButton = projectDialog.querySelector("button");
+const title = document.getElementById("title");
+const priority = document.getElementById("priority");
 
 projectSubmitButton.addEventListener("click", (event) => {
-    event.preventDefault();
-    projectDialog.close();
+    if(title.textContent !== "") {
+        event.preventDefault();
+        projectDialog.close();
+    }
 });
 
 const projects = [];
