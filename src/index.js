@@ -9,7 +9,6 @@ document.documentElement.setAttribute("data-theme", "light");
 const projectDialog = document.getElementById("project-dialog");
 const projectSubmitButton = projectDialog.querySelector("button");
 const title = document.getElementById("title");
-const priority = document.getElementById("priority");
 
 projectSubmitButton.addEventListener("click", (event) => {
     if(title.textContent !== "") {
@@ -18,13 +17,17 @@ projectSubmitButton.addEventListener("click", (event) => {
     }
 });
 
+//side panel
+const newProjectButton = document.getElementById("new-project");
+newProjectButton.addEventListener("click", () => {
+    projectDialog.showModal();
+});
+
 const projects = [];
 
 function addProject(newProject) {
     projects.push(project.createNewProject(newProject));
 }
-
-projectDialog.showModal();
 
 addProject("My first project");
 addProject("My second project");

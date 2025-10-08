@@ -72,9 +72,38 @@ dialog {
     background-color: var(--background);
 }
 
-.dialog::backdrop {
+dialog::backdrop {
     background-color: black;
     opacity: 0.25;
+}
+
+dialog[open] {
+    animation: show-dialog 0.5s ease-out;
+}
+
+dialog[open]::backdrop {
+    animation: show-backdrop 0.5s ease-out;
+}
+
+@keyframes show-backdrop {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 0.25;
+    }
+}
+
+@keyframes show-dialog {
+    from {
+        opacity: 0;
+        transform: translateY(-50%);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 body {
