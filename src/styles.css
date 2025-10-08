@@ -35,6 +35,19 @@ button:hover {
     cursor: pointer;
 }
 
+button.form {
+    width: 10em;
+    text-align: center;
+    align-self: center;
+}
+
+button.add {
+    margin-top: 1.5em;
+    width: 5em;
+    text-align: center;
+    align-self: center;
+}
+
 label {
     display: flex;
     justify-content: space-between;
