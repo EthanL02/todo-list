@@ -1,4 +1,5 @@
 const sideBar = document.getElementById("side-bar");
+const newProjectButton = document.getElementById("new-project");
 const mainContent = document.getElementById("main-content");
 
 function createProject(project) {
@@ -7,7 +8,7 @@ function createProject(project) {
     button.textContent = project.name;
 
     button.addEventListener("click", () => {
-        mainContent.update(project.todos);
+        update(project.todos);
     });
     sideBar.prepend(button);
 }
@@ -18,7 +19,19 @@ function createTodo(todo) {
     mainContent.append(background);
 }
 
+function clear() {
+    while (sideBar.firstChild !== newProjectButton) {
+        sideBar.removeChild(sideBar.firstChild);
+    }
+
+    while (mainContent.firstChild) {
+        mainContent.removeChild(mainContent.firstChild);
+    }
+}
+
 function update(projects, curProject) {
+    clear();
+
     //Load sidebar with each project
     projects.forEach(project => {
         createProject(project);

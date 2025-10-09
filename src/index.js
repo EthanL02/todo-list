@@ -9,9 +9,13 @@ document.documentElement.setAttribute("data-theme", "light");
 const projectDialog = document.getElementById("project-dialog");
 const projectSubmitButton = projectDialog.querySelector("button");
 const title = document.getElementById("title");
+const priority = document.getElementById("priority");
 
 projectSubmitButton.addEventListener("click", (event) => {
-    if(title.textContent !== "") {
+    if(title.value !== "") {
+        addProject(title.value, priority.value);
+
+        console.log(projects);
         event.preventDefault();
         projectDialog.close();
     }
@@ -24,16 +28,17 @@ newProjectButton.addEventListener("click", () => {
 });
 
 const projects = [];
+let curProject;
 
 function addProject(newProject) {
-    projects.push(project.createNewProject(newProject));
+    curProject = project.createNewProject(newProject);
+    projects.push(curProject);
+    displayController.update(projects, curProject);
 }
 
 addProject("My first project");
 addProject("My second project");
 addProject("My third project");
-
-let curProject = projects[0];
 
 const todo1 = todo.createNewTodo("Item # 1", "Description for first item", "4/16/25", 5);
 const todo2 = todo.createNewTodo("Item # 2", "Description for second item", "5/07/26", 5);

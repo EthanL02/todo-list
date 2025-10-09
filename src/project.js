@@ -1,4 +1,4 @@
-function createNewProject(name) {
+function createNewProject(name, priority) {
     const todos = [];
 
     function addTodo(newTodo) {
