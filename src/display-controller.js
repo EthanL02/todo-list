@@ -1,6 +1,7 @@
 const sideBar = document.getElementById("side-bar");
 const newProjectButton = document.getElementById("new-project");
 const mainContent = document.getElementById("main-content");
+const newTodoButton = document.getElementById("new-todo");
 
 let curProject;
 
@@ -18,7 +19,7 @@ function createProject(project) {
 function createTodo(todo) {
     const background = document.createElement("div");
     background.classList.add("todo-background");
-    mainContent.append(background);
+    mainContent.prepend(background);
 }
 
 function clearSidebar() {
@@ -28,7 +29,7 @@ function clearSidebar() {
 }
 
 function clearMainContent() {
-    while (mainContent.firstChild) {
+    while (mainContent.firstChild !== newTodoButton) {
         mainContent.removeChild(mainContent.firstChild);
     }
 }
