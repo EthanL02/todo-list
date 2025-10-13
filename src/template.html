@@ -16,13 +16,38 @@
         </div>
         <dialog closedby="any" id="project-dialog">
             <form method="dialog">
-                <label for="title">
+                <label for="project-title">
                     Title
-                    <input class="text" name="title" id="title" type="text" required>
+                    <input class="text" name="title" id="project-title" type="text" required>
                 </label>
-                <label for="priority">
+                <label for="project-description">
+                    Description
+                    <input class="longtext" name="description" id="todo-description" type="text">
+                </label>
+                <label for="project-priority">
                     Priority
-                    <input class="number" name="priority" id="priority" type="number">
+                    <input class="number" name="priority" id="project-priority" type="number">
+                </label>
+                <button class="form" type="submit">Submit</button>            
+            </form>
+        </dialog>
+        <dialog closedby="any" id="todo-dialog">
+            <form method="dialog">
+                <label for="todo-title">
+                    Title
+                    <input class="text" name="title" id="todo-title" type="text" required>
+                </label>
+                <label for="todo-description">
+                    Description
+                    <input class="longtext" name="description" id="todo-description" type="text">
+                </label>
+                <label for="todo-due-date">
+                    Due Date
+                    <input class="number" name="due-date" id="todo-due-date" type="number">
+                </label>
+                <label for="todo-priority">
+                    Priority
+                    <input class="number" name="priority" id="todo-priority" type="number">
                 </label>
                 <button class="form" type="submit">Submit</button>            
             </form>

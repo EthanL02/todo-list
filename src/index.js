@@ -8,8 +8,8 @@ document.documentElement.setAttribute("data-theme", "light");
 //project form elements
 const projectDialog = document.getElementById("project-dialog");
 const projectSubmitButton = projectDialog.querySelector("button");
-const title = document.getElementById("title");
-const priority = document.getElementById("priority");
+const title = document.getElementById("project-title");
+const priority = document.getElementById("project-priority");
 
 projectSubmitButton.addEventListener("click", (event) => {
     if(title.value !== "") {
@@ -19,6 +19,15 @@ projectSubmitButton.addEventListener("click", (event) => {
         event.preventDefault();
         projectDialog.close();
     }
+});
+
+//todo form elements
+const todoDialog = document.getElementById("todo-dialog");
+
+//main content
+const newTodoButton = document.getElementById("new-todo");
+newTodoButton.addEventListener("click", () => {
+    todoDialog.showModal();
 });
 
 //side panel
