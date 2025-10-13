@@ -8,14 +8,14 @@ document.documentElement.setAttribute("data-theme", "light");
 //project form elements
 const projectDialog = document.getElementById("project-dialog");
 const projectSubmitButton = projectDialog.querySelector("button");
-const title = document.getElementById("project-title");
-const priority = document.getElementById("project-priority");
+const projectTitle = document.getElementById("project-title");
+const projectDescription = document.getElementById("project-description");
+const projectPriority = document.getElementById("project-priority");
 
 projectSubmitButton.addEventListener("click", (event) => {
-    if(title.value !== "") {
-        addProject(title.value, priority.value);
+    if (projectTitle.value !== "") {
+        addProject(projectTitle.value, projectPriority.value);
 
-        console.log(projects);
         event.preventDefault();
         projectDialog.close();
     }
@@ -23,6 +23,20 @@ projectSubmitButton.addEventListener("click", (event) => {
 
 //todo form elements
 const todoDialog = document.getElementById("todo-dialog");
+const todoSubmitButton = todoDialog.querySelector("button");
+const todoTitle = document.getElementById("todo-title");
+const todoDescription = document.getElementById("todo-description")
+const todoDueDate = document.getElementById("todo-due-date")
+const todoPriority = document.getElementById("todo-priority");
+
+todoSubmitButton.addEventListener("click", (event) => {
+    if (todoTitle.value !== "") {
+        console.log("new todo");
+
+        event.preventDefault();
+        todoDialog.close();
+    }
+});
 
 //main content
 const newTodoButton = document.getElementById("new-todo");

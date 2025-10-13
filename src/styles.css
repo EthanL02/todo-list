@@ -48,6 +48,10 @@ button.add {
     align-self: center;
 }
 
+input.longtext {
+    height: 5em;
+}
+
 label {
     display: flex;
     justify-content: space-between;
