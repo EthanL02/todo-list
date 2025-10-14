@@ -31,7 +31,7 @@ const todoPriority = document.getElementById("todo-priority");
 
 todoSubmitButton.addEventListener("click", (event) => {
     if (todoTitle.value !== "") {
-        console.log("new todo");
+        addTodo(todoTitle.value, todoDescription.value, todoDueDate.value, todoPriority.value);
 
         event.preventDefault();
         todoDialog.close();
@@ -52,6 +52,11 @@ newProjectButton.addEventListener("click", () => {
 
 const projects = [];
 let curProject;
+
+function addTodo(newTodo) {
+    curProject.addTodo(todo.createNewTodo(newTodo));
+    displayController.update(projects, curProject);
+}
 
 function addProject(newProject) {
     curProject = project.createNewProject(newProject);
